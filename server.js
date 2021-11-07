@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 db.mongoose
-    .connect(env.local.MONGODB_URL)
+    .connect(config.db.url)
     .then(() => {
         console.log("Ket noi co so du lieu thanh cong!");
     })
