@@ -13,8 +13,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+MONGODB_URL = config.db.url;
 db.mongoose
-    .connect(config.db.url)
+    .connect(MONGODB_URL)
     .then(() => {
         console.log("Ket noi co so du lieu thanh cong!");
     })
