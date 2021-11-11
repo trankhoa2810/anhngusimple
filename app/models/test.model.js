@@ -1,10 +1,6 @@
 module.exports = mongoose => {
     const schema = mongoose.Schema(
         {
-            id: {
-                type: String,
-                required: [true, "Can nhap id bai test"],
-            },
             name: {
                 type: String,
                 required: [true, "Can nhap ten bai test"],
