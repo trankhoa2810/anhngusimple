@@ -4,7 +4,7 @@ const db = require("../models");
 const Test = db.Test;
 
 exports.create = async (req, res, next) => {
-    if (!req.body.id || !req.body.name || !req.body.time || !req.body.password || !req.body.visible || !req.body.id) {
+    if (!req.body.name || !req.body.time || !req.body.password || !req.body.visible || !req.body.id) {
         return next(new BadRequestError(400, "Thong tin de bai bi thieu"));
     }
     const test = new Test({
