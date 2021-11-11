@@ -8,7 +8,6 @@ exports.create = async (req, res, next) => {
         return next(new BadRequestError(400, "Thong tin de bai bi thieu"));
     }
     const test = new Test({
-        id: req.body.id,
         name: req.body.name,
         time: req.body.time,
         password: req.body.password,
